@@ -56,7 +56,7 @@ public class Alumno {
         return promedio;
     }
 
-    public void setPromedio(double promedio) {
+    public void setPromedio() {
         this.promedio = (this.estructuras + this.ingles + this.iot) / 3;
     }
 
@@ -64,11 +64,12 @@ public class Alumno {
     public String toString() {
         return "Alumno [matricula=" + matricula + ", nombre=" + nombre + ", promedio=" + promedio + "]";
     }
-    
-    
 }
 
 // object hereda todas las clases
 
 // ctrl + . para los getters and setters
 // Obtener y modificar valor de una variable privada
+
+
+// POJOs Plain Old Java Objet
