@@ -1,5 +1,9 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.security.PublicKey;
+
+import javax.naming.event.ObjectChangeListener;
+
 import java.io.IOException;
 public class promedioGrupal{
 
@@ -47,7 +51,13 @@ public class promedioGrupal{
             System.out.println(a.toString());
         }
     }
-
+    public static double calcularPromedioGrupo(){
+        double suma = 0;
+        for(Alumno a: alumnos ){
+            suma += a.getPromedio();
+        }
+        return (suma / alumnos.length );
+    }
 
     public static void main(String[] args) throws IOException {
         int n; //tamaño del grupo
@@ -70,15 +80,11 @@ public class promedioGrupal{
         leerAlumnos();
         // Mostrar informacion
         imprimirAlumnos();
-
         //Obtener el promedio
-        // promedio = suma /n;
-        // System.out.println("----------------------------------------");
-        // System.out.println("Las calificaciones de cada alumno son: ");
-        // for( double calif : calificaciones){
-        //     System.out.println(calif);
-        // System.out.println("----------------------------------------");
-        // System.out.println("El promedio de grupo es: " + promedio);
+        promedio = calcularPromedioGrupo();
+        
+        System.out.println("----------------------------------------");
+        System.out.println("El promedio de grupo es: " + promedio);
         // }
         
     }
