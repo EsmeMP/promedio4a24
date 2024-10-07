@@ -38,12 +38,23 @@ public class promedioGrupal{
             alumnos[i] = a;
         }
     }
+
+    public static void imprimirAlumnos() {
+        System.out.println("Contenido del arreglo alumnos:  ");
+        for(Alumno a : alumnos){
+            System.out.println("---------------------------------------");
+            System.out.println("Informacion del alumno: ");
+            System.out.println(a.toString());
+        }
+    }
+
+
     public static void main(String[] args) throws IOException {
         int n; //tamaño del grupo
        
         // double[] calificaciones; //Calificaciones de cada alumno
         // double suma = 0; // para sumar calificaciones
-        // double promedio; // el promedio del grupo
+        double promedio; // el promedio del grupo
 
        
 
@@ -53,27 +64,24 @@ public class promedioGrupal{
         System.out.println("Escribe el numero de alumnos de un grupo: ");
         entrada = bufer.readLine(); //Lectura del teclado
         n = Integer.parseInt(entrada); //Conversion de string a int
-
         //Contruir el arreglo alumnos
         alumnos = new Alumno[n];
+        // Introducir Informacion de los Alumnos
+        leerAlumnos();
+        // Mostrar informacion
+        imprimirAlumnos();
 
-        // calificaciones = new double[n]; //Construccion del arreglo
-        // Pedir calificacion y acumularla
-        // for( int i = 0;i < calificaciones.length;i++){
-        // //     System.out.println("Escribe la calificacion del estudiante[ "+ (i+1)+ "]");
-        // //     entrada = bufer.readLine();
-        // //     calificaciones [i] = Double.parseDouble(entrada);
-        // //     suma += calificaciones[i];
-        // // }
         //Obtener el promedio
         // promedio = suma /n;
         // System.out.println("----------------------------------------");
         // System.out.println("Las calificaciones de cada alumno son: ");
         // for( double calif : calificaciones){
         //     System.out.println(calif);
-        // System.out.println("----------------------------------------"); 
-        // System.out.println("El promedio de grupo es: " + promedio); 
+        // System.out.println("----------------------------------------");
+        // System.out.println("El promedio de grupo es: " + promedio);
         // }
         
     }
 }
+
+// METODO toString SIRVE PARA VER LAS CALIFICACIONES
