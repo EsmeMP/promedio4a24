@@ -59,6 +59,28 @@ public class promedioGrupal{
         return (suma / alumnos.length );
     }
 
+    public static double calcularPromedioEstructuras() {
+        double suma = 0;
+        for (Alumno a : alumnos){
+            suma += a.getEstructuras();
+        }
+        return (suma / alumnos.length);
+    }
+    public static double calcularPromedioIngles() {
+        double suma = 0;
+        for (Alumno a : alumnos){
+            suma += a.getIngles();
+        }
+        return (suma / alumnos.length);
+    }
+    public static double calcularPromedioIot() {
+        double suma = 0;
+        for (Alumno a : alumnos){
+            suma += a.getIot();
+        }
+        return (suma / alumnos.length);
+    }
+
     public static void main(String[] args) throws IOException {
         int n; //tamaño del grupo
        
@@ -82,11 +104,12 @@ public class promedioGrupal{
         imprimirAlumnos();
         //Obtener el promedio
         promedio = calcularPromedioGrupo();
-        
+
         System.out.println("----------------------------------------");
         System.out.println("El promedio de grupo es: " + promedio);
-        // }
-        
+        System.out.println("El promedio de grupo en Estructuras es: " + calcularPromedioEstructuras());
+        System.out.println("El promedio de grupo en Estructuras es: " + calcularPromedioIngles());
+        System.out.println("El promedio de grupo en Estructuras es: " + calcularPromedioIot());
     }
 }
 

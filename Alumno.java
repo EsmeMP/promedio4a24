@@ -5,10 +5,23 @@ public class Alumno {
     private double ingles;
     private double iot;
     private double promedio;
+    private double promedioEstructuras;
+    private double promedioIngles;
+    private double promedioIot;
 
     // constructor
     public Alumno(String m, String n){
+        // Inicialiazar el nombre y la matricula del alumno
         this.matricula = m;
+        this.nombre = n;
+    }
+
+    // constructor vacio
+    public Alumno(){
+        System.out.println("Se construyo un objeto alumno");
+    }
+
+    public Alumno( String n) {
         this.nombre = n;
     }
 
@@ -60,10 +73,40 @@ public class Alumno {
         this.promedio = (this.estructuras + this.ingles + this.iot) / 3;
     }
 
+
     @Override //Anotacion, anula la informacion
     public String toString() {
         return "Alumno [matricula=" + matricula + ", nombre=" + nombre + ", promedio=" + promedio + "]";
     }
+
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
+    }
+
+    public double getPromedioEstructuras() {
+        return promedioEstructuras;
+    }
+
+    public void setPromedioEstructuras(double promedioEstructuras) {
+        this.promedioEstructuras = promedioEstructuras;
+    }
+
+    public double getPromedioIngles() {
+        return promedioIngles;
+    }
+
+    public void setPromedioIngles(double promedioIngles) {
+        this.promedioIngles = promedioIngles;
+    }
+
+    public double getPromedioIot() {
+        return promedioIot;
+    }
+
+    public void setPromedioIot(double promedioIot) {
+        this.promedioIot = promedioIot;
+    }
+
 }
 
 // object hereda todas las clases
